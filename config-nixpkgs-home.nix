@@ -7,12 +7,18 @@
   programs.home-manager.enable = true;
 
   home.packages = [
-    pkgs.htop
     pkgs.fortune
     pkgs.csvkit
     pkgs.tailscale
     pkgs.any-nix-shell
     pkgs.atuin
+  # sysadmin stuff
+    pkgs.htop
+    pkgs.ftop
+    pkgs.glances
+  # netadmin stuff
+    pkgs.traceroute
+    pkgs.mtr
   ];
 
   programs.git = {
