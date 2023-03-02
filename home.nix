@@ -18,7 +18,6 @@
     pkgs.mtr
   # access stuff
     pkgs.tailscale
-    pkgs.mosh
   ];
 
   programs.git = {
