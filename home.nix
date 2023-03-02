@@ -1,10 +1,8 @@
-{ config, pkgs, ... }:
-
-{
-  home.username = "emv";
-  home.homeDirectory = "/home/emv";
-  home.stateVersion = "22.11";
-  programs.home-manager.enable = true;
+{pkgs, ...}: {
+    home.username = "emv";
+    home.homeDirectory = "/home/emv";
+    home.stateVersion = "22.11"; # To figure this out you can comment out the line and see what version it expected.
+    programs.home-manager.enable = true;
 
   home.packages = [
     pkgs.fortune
@@ -12,7 +10,7 @@
     pkgs.tailscale
     pkgs.any-nix-shell
     pkgs.atuin
-  # sysadmin stuff
+    # sysadmin stuff
     pkgs.htop
     pkgs.ftop
     pkgs.glances
@@ -25,19 +23,10 @@
     enable = true;
     userName  = "vielmetti";
     userEmail = "edward.vielmetti@gmail.com";
-    extraConfig = {
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
-    };
   };
 
   programs.zsh = {
     enable = true;
-    history = {
-      size = 10000;
-      path = "${config.xdg.dataHome}/zsh/history";
-    };
     zplug = {
       enable = true;
       plugins = [
