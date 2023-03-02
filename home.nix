@@ -7,16 +7,18 @@
   home.packages = [
     pkgs.fortune
     pkgs.csvkit
-    pkgs.tailscale
     pkgs.any-nix-shell
     pkgs.atuin
-    # sysadmin stuff
+  # sysadmin stuff
     pkgs.htop
     pkgs.ftop
     pkgs.glances
   # netadmin stuff
     pkgs.traceroute
     pkgs.mtr
+  # access stuff
+    pkgs.tailscale
+    pkgs.mosh
   ];
 
   programs.git = {
