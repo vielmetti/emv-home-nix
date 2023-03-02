@@ -27,6 +27,8 @@
     userEmail = "edward.vielmetti@gmail.com";
   };
 
+  programs.mosh.enable = true;
+
   programs.zsh = {
     enable = true;
     zplug = {
