@@ -3,6 +3,8 @@
     home.homeDirectory = "/home/emv";
     home.stateVersion = "22.11"; # To figure this out you can comment out the line and see what version it expected.
     programs.home-manager.enable = true;
+    programs.mosh.enable = true;
+
 
   home.packages = [
     pkgs.fortune
@@ -25,8 +27,6 @@
     userName  = "vielmetti";
     userEmail = "edward.vielmetti@gmail.com";
   };
-
-  programs.mosh.enable = true;
 
   programs.zsh = {
     enable = true;
